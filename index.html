@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <header>Updating a Linux System</header>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <hr class="rounded">
+            <li><a class="nav-link" href="#The_Process">The Process</a></li>
+            <hr class="rounded">
+            <li><a class="nav-link" href="#Importance_of_Backups">Importance of Backups</a></li>
+            <hr class="rounded">
+            <li><a class="nav-link" href="#History_of_Updating_Linux">History of Updating Linux</a></li>
+            <hr class="rounded">
+            <li><a class="nav-link" href="#Risks">Risks</a></li>
+            <hr class="rounded">
+            <li><a class="nav-link" href="#Source">Source</a></li>
+            <hr class="rounded">
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>Updating a Linux system is a crucial task that ensures your system is secure, stable, and up-to-date with
+                the latest features and bug fixes. It's important to keep your Linux system updated to prevent security
+                vulnerabilities and performance issues.
+            <p>
+        </section>
+        <section id="The_Process" class="main-section">
+            <header>The Process</header>
+            <p>The process of updating a Linux system involves several steps:</p>
+
+            <ul>
+
+                <li>Update the package repository: The first step is to update the package repository by running the
+                    command <code>sudo apt-get update</code> on Debian-based systems or <code>sudo dnf update</code> on
+                    Fedora-based systems. This will ensure that your system has the latest information about the
+                    available packages.</li>
+
+                <li>Upgrade packages: After updating the package repository, you can upgrade your packages to the latest
+                    version by running the command <code>sudo apt-get upgrade</code> on Debian-based systems or
+                    <code>sudo dnf upgrade</code> on Fedora-based systems. This will install any updates for the
+                    packages that are already installed on your system.</li>
+
+                <li>Install new packages: You can also install new packages by running the command
+                    <code>sudo apt-get install package-name</code> on Debian-based systems or
+                    <code>sudo dnf install package-name</code> on Fedora-based systems. This will install the specified
+                    package and its dependencies.</li>
+
+                <li>Clean up: After updating and upgrading your packages, you can clean up any unused packages or
+                    dependencies by running the command <code>sudo apt-get autoremove</code> on Debian-based systems or
+                    <code>sudo dnf autoremove</code> on Fedora-based systems.</li>
+
+            </ul>
+        </section>
+        <section id="Importance_of_Backups" class="main-section">
+            <header>Importance of Backups</header>
+            <p>Backing up your system before performing a Linux update is important for several reasons:</p>
+            <ul>
+                <li>Data loss prevention: An update can sometimes go wrong, leading to the loss of important files,
+                    configurations, or settings. A backup ensures that you can restore your system to its previous state
+                    if anything goes wrong during the update.</li>
+
+                <li>System recovery: In the event of a catastrophic system failure during an update, a backup allows you
+                    to quickly recover your system and avoid the potential loss of hours or days of work.</li>
+
+                <li>System stability: An update can sometimes introduce bugs or conflicts with existing software or
+                    configurations, which can lead to system instability or crashes. A backup ensures that you can
+                    revert to a stable system configuration in case of such problems.</li>
+
+                <li>Time-saving: In case the update process takes too long, fails, or is interrupted, having a backup of
+                    your system allows you to restore your system to its previous state and save time on re-installing
+                    the operating system or software.</li>
+            </ul>
+            <p>Overall, backing up your system before performing a Linux update is a best practice that ensures the
+                safety and stability of your system. It's always better to be safe than sorry, so taking a few extra
+                minutes to create a backup can save you from potential headaches and data loss.</p>
+        </section>
+        <section id="History_of_Updating_Linux" class="main-section">
+            <header>History of Updating Linux</header>
+            <p>The history of updating Linux systems dates back to the early days of Linux itself. Linux was first
+                developed by Linus Torvalds in 1991 as a free and open-source alternative to the proprietary Unix
+                operating system</p>
+
+            <p>In the early days of Linux, updates were primarily distributed through new releases of the operating
+                system, which were typically released every few months. These new releases would include updated
+                versions of software packages, bug fixes, and new features.</p>
+
+            <p>As Linux gained popularity and more developers began contributing to the project, new tools were
+                developed to make updating Linux systems easier and more efficient. One of the earliest tools for
+                managing updates on Linux systems was apt, which was developed for the Debian distribution in 1998.</p>
+
+            <p>The apt tool allowed users to easily install and update packages from the Debian repositories, and it
+                quickly became the standard tool for managing updates on Debian-based systems. Other distributions
+                developed their own update management tools, such as yum for Red Hat and Fedora-based systems and pacman
+                for Arch Linux.</p>
+
+            <p>In recent years, the package management systems used by Linux distributions have become more
+                sophisticated, with features like dependency resolution, automatic updates, and rollback support. These
+                improvements have made updating Linux systems faster, safer, and more reliable than ever before.</p>
+        </section>
+        <section id="Risks" class="main-section">
+            <header>Risks</header>
+            <p>While updating a Linux system is generally a safe and straightforward process, there are some risks
+                involved that users should be aware of:</p>
+            <ul>
+                <li>
+                    Package conflicts: Occasionally, an update to one package may cause a conflict with another package
+                    or dependency. This can cause the system to become unstable or even crash. However, modern package
+                    managers are designed to detect and resolve these conflicts automatically.
+                </li>
+                <br>
+                <li>
+                    Broken dependencies: An update may require new dependencies that are not compatible with other
+                    installed packages or libraries. This can result in a broken dependency chain, causing software to
+                    stop functioning or preventing other updates from being installed.
+                </li>
+                <br>
+                <li>
+                    Data loss: In rare cases, an update may cause data loss due to bugs or other issues. This can be
+                    mitigated by creating a backup of important data before updating the system.
+                </li>
+                <br>
+                <li>
+                    Security vulnerabilities: While updates are designed to fix security vulnerabilities, there is a
+                    risk that new vulnerabilities may be introduced in the process. However, it is generally considered
+                    safer to keep your system up to date than to leave it vulnerable to known security issues.
+                </li>
+                <br>
+                <li>
+                    System failures: In some cases, updates can cause system failures or crashes. This can be due to
+                    hardware or software issues, and can often be resolved by reverting to a previous system state or
+                    seeking assistance from a support community.
+                </li>
+            </ul>
+        </section>
+        <section id="Source" class="main-section">
+            <header>Source</header>
+            <ul>
+                <li>
+                    All the documentation is taken from
+                    <a href="https://wiki.archlinux.org/title/Pacman/Rosetta" target="_blank">Arch Linux Wiki's Pacman Rosetta</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
